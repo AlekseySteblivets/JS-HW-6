@@ -62,27 +62,44 @@
 // параметры firstArray и secondArray, и возвращает новый массив их общих элементов, то есть тех которые есть в обоих массивах.
 // Выполни рефакторинг функции так, чтобы вместо цикла for она использовала метод forEach.
 
-function getCommonElements(firstArray, secondArray) {
-    const commonElements = [];
-    // Пиши код ниже этой строки
+// function getCommonElements(firstArray, secondArray) {
+//     const commonElements = [];
+//     // Пиши код ниже этой строки
 
-    // for (let i = 0; i < firstArray.length; i += 1) {
-    //     if (secondArray.includes(firstArray[i])) {
-    //         commonElements.push(firstArray[i]);
-    //     }
-    // }
+//     // for (let i = 0; i < firstArray.length; i += 1) {
+//     //     if (secondArray.includes(firstArray[i])) {
+//     //         commonElements.push(firstArray[i]);
+//     //     }
+//     // }
 
-    firstArray.forEach(element => {
-        if (secondArray.includes(element)) {
-            commonElements.push(element)
-        }
-    });
+//     firstArray.forEach(element => {
+//         if (secondArray.includes(element)) {
+//             commonElements.push(element)
+//         }
+//     });
 
-    return commonElements;
-    // Пиши код выше этой строки
-}
+//     return commonElements;
+//     // Пиши код выше этой строки
+// }
 
-console.log(getCommonElements([1, 2, 3], [2, 4]));
-console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19]));
-console.log(getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]));
-console.log(getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]));    
+// console.log(getCommonElements([1, 2, 3], [2, 4]));
+// console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19]));
+// console.log(getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]));
+// console.log(getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]));    
+
+
+
+// 6-4-44Выполни рефакторинг функции calculateTotalPrice() так, чтобы она была объявлена как стрелочная.
+
+// Пиши код ниже этой строки
+
+// function calculateTotalPrice(quantity, pricePerItem) {
+//     // Пиши код выше этой строки
+//     return quantity * pricePerItem;
+// }
+
+const calculateTotalPrice = (quantity, pricePerItem) => quantity * pricePerItem;
+
+console.log(calculateTotalPrice(5, 100));
+console.log(calculateTotalPrice(8, 60));
+console.log(calculateTotalPrice(3, 400));
