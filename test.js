@@ -108,14 +108,32 @@
 
 // 6-5-44Выполни рефакторинг функции calculateTotalPrice() так, чтобы она была объявлена как стрелочная.
 
+// // Пиши код ниже этой строки
+// // const calculateTotalPrice = (quantity, pricePerItem) => {
+// //     return quantity * pricePerItem;
+// // };
+
+// const calculateTotalPrice = (quantity, pricePerItem) => quantity * pricePerItem;
+
+// // Пиши код выше этой строки
+// console.log(calculateTotalPrice(5, 100));
+// console.log(calculateTotalPrice(8, 60));
+// console.log(calculateTotalPrice(3, 400));
+
+
+
+// 6-6-44ыполни рефакторинг функции calculateTotalPrice(orderedItems) заменив её объявление на стрелочную функцию. 
+// Замени коллбек - функцию передаваемую в метод forEach() на стрелочную функцию.
+
 // Пиши код ниже этой строки
-// const calculateTotalPrice = (quantity, pricePerItem) => {
-//     return quantity * pricePerItem;
-// };
+const calculateTotalPrice = ((orderedItems) => {
+    let totalPrice = 0;
+    orderedItems.forEach(element => {
+        totalPrice += element;
+        // console.log(totalPrice);
+    });
+    return totalPrice;
+});
 
-const calculateTotalPrice = (quantity, pricePerItem) => quantity * pricePerItem;
-
-// Пиши код выше этой строки
-console.log(calculateTotalPrice(5, 100));
-console.log(calculateTotalPrice(8, 60));
-console.log(calculateTotalPrice(3, 400));
+console.log(calculateTotalPrice([12, 85, 37, 4]));
+console.log(calculateTotalPrice([164, 48, 291]));
