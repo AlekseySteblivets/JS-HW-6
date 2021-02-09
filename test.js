@@ -143,30 +143,61 @@
 // 6-7-44Замени объявление функции filterArray() и коллбек для метода forEach() на стрелочные функции.
 // Пиши код ниже этой строки
 
-const filterArray = (numbers, value) => {
-    const filteredNumbers = [];
-
-    numbers.forEach(element => {
-        if (element > value) { filteredNumbers.push(element) }
-    });
-    return filteredNumbers;
-};
-
-// Пиши код выше этой строки
-
-// function filterArray(numbers, value) {
+// const filterArray = (numbers, value) => {
 //     const filteredNumbers = [];
 
-//     numbers.forEach(function (number) {
-//         if (number > value) {
-//             filteredNumbers.push(number);
-//         }
+//     numbers.forEach(element => {
+//         if (element > value) { filteredNumbers.push(element) }
 //     });
 //     return filteredNumbers;
+// };
+
+// // Пиши код выше этой строки
+
+// // function filterArray(numbers, value) {
+// //     const filteredNumbers = [];
+
+// //     numbers.forEach(function (number) {
+// //         if (number > value) {
+// //             filteredNumbers.push(number);
+// //         }
+// //     });
+// //     return filteredNumbers;
+// // }
+
+// console.log(filterArray([1, 2, 3, 4, 5], 3));
+// console.log(filterArray([1, 2, 3, 4, 5], 4));
+// console.log(filterArray([1, 2, 3, 4, 5], 5));
+// console.log(filterArray([12, 24, 8, 41, 76], 38));
+
+
+
+// 6-8-44Замени объявление функции getCommonElements() и коллбек для метода forEach() на стрелочные функции.
+
+// Пиши код ниже этой строки
+const getCommonElements = (firstArray, secondArray) => {
+    const commonElements = [];
+
+    firstArray.forEach(element => {
+        if (secondArray.includes(element)) {
+            commonElements.push(element);
+        }
+    });
+    return commonElements;
+
+};
+// function getCommonElements(firstArray, secondArray) {
+//     const commonElements = [];
+
+//     firstArray.forEach(function (element) {
+//         if (secondArray.includes(element)) {
+//             commonElements.push(element);
+//         }
+//     });
+
+//     // Пиши код выше этой строки
+//     return commonElements;
 // }
 
-
-console.log(filterArray([1, 2, 3, 4, 5], 3));
-console.log(filterArray([1, 2, 3, 4, 5], 4));
-console.log(filterArray([1, 2, 3, 4, 5], 5));
-console.log(filterArray([12, 24, 8, 41, 76], 38));
+console.log(getCommonElements([1, 2, 3], [2, 4]));
+console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19]));
