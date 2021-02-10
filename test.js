@@ -392,31 +392,44 @@
 // 6-14-44Дополни функцию getUserEmails(users) так, чтобы она возвращала массив почтовых адресов 
 // пользователей(свойство email) из массива объектов в параметре users.
 
+// // Пиши код ниже этой строки
+
+// const getUserEmails = users => users.map(user => user.email);
+// // Пиши код выше этой строки
+
+// console.log(getUserEmails([
+//     {
+//         name: 'Moore Hensley',
+//         email: 'moorehensley@indexia.com',
+//         eyeColor: 'blue',
+//         friends: ['Sharron Pace'],
+//         isActive: false,
+//         balance: 2811,
+//         skills: ['ipsum', 'lorem'],
+//         gender: 'male',
+//         age: 37,
+//     },
+//     {
+//         name: 'Sharlene Bush',
+//         email: 'sharlenebush@tubesys.com',
+//         eyeColor: 'blue',
+//         friends: ['Briana Decker', 'Sharron Pace'],
+//         isActive: true,
+//         balance: 3821,
+//         skills: ['tempor', 'mollit', 'commodo', 'veniam', 'laborum'],
+//         gender: 'female',
+//         age: 34,
+//     }]));
+
+
+
+// 6-15-44Дополни код так, чтобы в переменной evenNumbers получился массив чётных чисел из массива numbers, 
+// а в переменной oddNumbers массив нечётных.Обязательно используй метод filter().
+
+const numbers = [17, 24, 82, 61, 36, 18, 47, 52, 73];
 // Пиши код ниже этой строки
 
-const getUserEmails = users => users.map(user => user.email);
-// Пиши код выше этой строки
-
-console.log(getUserEmails([
-    {
-        name: 'Moore Hensley',
-        email: 'moorehensley@indexia.com',
-        eyeColor: 'blue',
-        friends: ['Sharron Pace'],
-        isActive: false,
-        balance: 2811,
-        skills: ['ipsum', 'lorem'],
-        gender: 'male',
-        age: 37,
-    },
-    {
-        name: 'Sharlene Bush',
-        email: 'sharlenebush@tubesys.com',
-        eyeColor: 'blue',
-        friends: ['Briana Decker', 'Sharron Pace'],
-        isActive: true,
-        balance: 3821,
-        skills: ['tempor', 'mollit', 'commodo', 'veniam', 'laborum'],
-        gender: 'female',
-        age: 34,
-    }]));
+const evenNumbers = numbers.filter(number => number % 2 === 0);
+const oddNumbers = numbers.filter(number => number % 2 !== 0);
+console.log(evenNumbers);
+console.log(oddNumbers);
