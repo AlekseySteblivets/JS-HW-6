@@ -209,40 +209,49 @@
 // Выполни рефакторинг функции так, чтобы она стала чистой - не изменяла массив чисел numbers, а создавала,
 // наполняла и возвращала новый массив с обновлёнными значениями.
 
-function changeEven(numbers, value) {
-    // Пиши код ниже этой строки
-    const newArray = [];
-    for (let i = 0; i < numbers.length; i += 1) {
-        if (numbers[i] % 2 === 0) {
-            newArray.push(numbers[i] + value);
-        }
-        else {
-            newArray.push(numbers[i]);
-        }
-    }
-    return newArray;
-    // Пиши код выше этой строки
-}
-
 // function changeEven(numbers, value) {
 //     // Пиши код ниже этой строки
 //     const newArray = [];
-//     const array = [];
 //     for (let i = 0; i < numbers.length; i += 1) {
-//         const elem = numbers[i] % 2 === 0
-//             ? numbers[i] + value
-//             : numbers[i];
-//         newArray.push(elem);
+//         if (numbers[i] % 2 === 0) {
+//             newArray.push(numbers[i] + value);
+//         }
+//         else {
+//             newArray.push(numbers[i]);
+//         }
 //     }
-//     const resultArray = [...array, ...newArray];
-//     return resultArray;
+//     return newArray;
 //     // Пиши код выше этой строки
 // }
 
+// // function changeEven(numbers, value) {
+// //     // Пиши код ниже этой строки
+// //     const newArray = [];
+// //     const array = [];
+// //     for (let i = 0; i < numbers.length; i += 1) {
+// //         const elem = numbers[i] % 2 === 0
+// //             ? numbers[i] + value
+// //             : numbers[i];
+// //         newArray.push(elem);
+// //     }
+// //     const resultArray = [...array, ...newArray];
+// //     return resultArray;
+// //     // Пиши код выше этой строки
+// // }
 
-console.log(changeEven([2, 8, 3, 7, 4, 6], 10));
-console.log(changeEven([17, 24, 68, 31, 42], 100));
+// console.log(changeEven([2, 8, 3, 7, 4, 6], 10));
+// console.log(changeEven([17, 24, 68, 31, 42], 100));
 
 
+
+// 6-10-44Дополни код так, чтобы в переменной planetsLengths получился массив длин названий планет. Обязательно используй метод map()
+
+const planets = ['Земля', 'Марс', 'Венера', 'Юпитер'];
+// Пиши код ниже этой строки
+const planetsLengths = planets.map((planet) => planet.length);
+
+
+
+console.log(planetsLengths);
 
 
