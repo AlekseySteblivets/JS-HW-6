@@ -439,26 +439,52 @@
 // 6-16-44Дополни код так, чтобы в переменной allGenres был массив всех жанров книг (свойство genres) из массива books, 
 // а в переменной uniqueGenres массив уникальных жанров - без повторений.
 
-const books = [
-    {
-        title: 'Последнее королевство',
-        author: 'Бернард Корнуэлл',
-        genres: ['приключения', 'историческое']
-    },
-    {
-        title: 'На берегу спокойных вод',
-        author: 'Роберт Шекли',
-        genres: ['фантастика', 'мистика']
-    },
-    {
-        title: 'Красна как кровь',
-        author: 'Ли Танит',
-        genres: ['ужасы', 'мистика', 'приключения']
-    }
-];
-// Пиши код ниже этой строки
-const allGenres = books.flatMap(book => book.genres);
-const uniqueGenres = allGenres.filter((book, index, array) => array.indexOf(book) === index);
+// const books = [
+//     {
+//         title: 'Последнее королевство',
+//         author: 'Бернард Корнуэлл',
+//         genres: ['приключения', 'историческое']
+//     },
+//     {
+//         title: 'На берегу спокойных вод',
+//         author: 'Роберт Шекли',
+//         genres: ['фантастика', 'мистика']
+//     },
+//     {
+//         title: 'Красна как кровь',
+//         author: 'Ли Танит',
+//         genres: ['ужасы', 'мистика', 'приключения']
+//     }
+// ];
+// // Пиши код ниже этой строки
+// const allGenres = books.flatMap(book => book.genres);
+// const uniqueGenres = allGenres.filter((book, index, array) => array.indexOf(book) === index);
 
-console.log(allGenres);
-console.log(uniqueGenres);
+// console.log(allGenres);
+// console.log(uniqueGenres);
+
+
+
+// 6-17-44Используя метод filter() дополни код так, чтобы:
+// В переменной topRatedBooks получился массив книг рейтинг которых(свойство rating)
+// больше либо равно значению переменной MIN_RATING.
+// В переменной booksByAuthor получился массив книг написанных автором с именем(свойство author)
+// которое совпадает со значением в переменной AUTHOR.
+
+const books = [
+    { title: 'Последнее королевство', author: 'Бернард Корнуэлл', rating: 8.38 },
+    { title: 'На берегу спокойных вод', author: 'Роберт Шекли', rating: 8.51 },
+    { title: 'Сон смешного человека', author: 'Федор Достоевский', rating: 7.75 },
+    { title: 'Красна как кровь', author: 'Ли Танит', rating: 7.94 },
+    { title: 'Враг Божий', author: 'Бернард Корнуэлл', rating: 8.67 }
+];
+
+const MIN_RATING = 8;
+const AUTHOR = 'Бернард Корнуэлл';
+// Пиши код ниже этой строки
+
+const topRatedBooks = books.filter(book => book.rating >= MIN_RATING);
+const booksByAuthor = books.filter(book => book.author === AUTHOR);
+
+console.log(topRatedBooks);
+console.log(booksByAuthor);
