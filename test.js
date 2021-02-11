@@ -1012,72 +1012,103 @@
 // почта которого(свойство email) совпадает со значением параметра email.
 
 // Пиши код ниже этой строки
-const users = [
-    {
-        name: 'Moore Hensley',
-        email: 'moorehensley@indexia.com',
-        eyeColor: 'blue',
-        friends: ['Sharron Pace'],
-        isActive: false,
-        balance: 2811,
-        gender: 'male'
-    },
-    {
-        name: 'Sharlene Bush',
-        email: 'sharlenebush@tubesys.com',
-        eyeColor: 'blue',
-        friends: ['Briana Decker', 'Sharron Pace'],
-        isActive: true,
-        balance: 3821,
-        gender: 'female'
-    },
-    {
-        name: 'Ross Vazquez',
-        email: 'rossvazquez@xinware.com',
-        eyeColor: 'green',
-        friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
-        isActive: false,
-        balance: 3793,
-        gender: 'male'
-    },
-    {
-        name: 'Elma Head',
-        email: 'elmahead@omatom.com',
-        eyeColor: 'green',
-        friends: ['Goldie Gentry', 'Aisha Tran'],
-        isActive: true,
-        balance: 2278,
-        gender: 'female'
-    },
-    {
-        name: 'Carey Barr',
-        email: 'careybarr@nurali.com',
-        eyeColor: 'blue',
-        friends: ['Jordan Sampson', 'Eddie Strong'],
-        isActive: true,
-        balance: 3951,
-        gender: 'male'
-    },
-    {
-        name: 'Blackburn Dotson',
-        email: 'blackburndotson@furnigeer.com',
-        eyeColor: 'brown',
-        friends: ['Jacklyn Lucas', 'Linda Chapman'],
-        isActive: false,
-        balance: 1498,
-        gender: 'male'
-    },
-    {
-        name: 'Sheree Anthony',
-        email: 'shereeanthony@kog.com',
-        eyeColor: 'brown',
-        friends: ['Goldie Gentry', 'Briana Decker'],
-        isActive: true,
-        balance: 2764,
-        gender: 'female'
-    }
-];
-const getUserWithEmail = (users, email) => users.find(user => user.email === email);
+// const users = [
+//     {
+//         name: 'Moore Hensley',
+//         email: 'moorehensley@indexia.com',
+//         eyeColor: 'blue',
+//         friends: ['Sharron Pace'],
+//         isActive: false,
+//         balance: 2811,
+//         gender: 'male'
+//     },
+//     {
+//         name: 'Sharlene Bush',
+//         email: 'sharlenebush@tubesys.com',
+//         eyeColor: 'blue',
+//         friends: ['Briana Decker', 'Sharron Pace'],
+//         isActive: true,
+//         balance: 3821,
+//         gender: 'female'
+//     },
+//     {
+//         name: 'Ross Vazquez',
+//         email: 'rossvazquez@xinware.com',
+//         eyeColor: 'green',
+//         friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+//         isActive: false,
+//         balance: 3793,
+//         gender: 'male'
+//     },
+//     {
+//         name: 'Elma Head',
+//         email: 'elmahead@omatom.com',
+//         eyeColor: 'green',
+//         friends: ['Goldie Gentry', 'Aisha Tran'],
+//         isActive: true,
+//         balance: 2278,
+//         gender: 'female'
+//     },
+//     {
+//         name: 'Carey Barr',
+//         email: 'careybarr@nurali.com',
+//         eyeColor: 'blue',
+//         friends: ['Jordan Sampson', 'Eddie Strong'],
+//         isActive: true,
+//         balance: 3951,
+//         gender: 'male'
+//     },
+//     {
+//         name: 'Blackburn Dotson',
+//         email: 'blackburndotson@furnigeer.com',
+//         eyeColor: 'brown',
+//         friends: ['Jacklyn Lucas', 'Linda Chapman'],
+//         isActive: false,
+//         balance: 1498,
+//         gender: 'male'
+//     },
+//     {
+//         name: 'Sheree Anthony',
+//         email: 'shereeanthony@kog.com',
+//         eyeColor: 'brown',
+//         friends: ['Goldie Gentry', 'Briana Decker'],
+//         isActive: true,
+//         balance: 2764,
+//         gender: 'female'
+//     }
+// ];
+// const getUserWithEmail = (users, email) => users.find(user => user.email === email);
 
-// Пиши код выше этой строки
-console.log(getUserWithEmail(users, 'shereeanthony@kog.com'));
+// // Пиши код выше этой строки
+// console.log(getUserWithEmail(users, 'shereeanthony@kog.com'));
+
+
+
+// 6-26-44Используя метод every() дополни код так, чтобы:
+// В переменной eachElementInFirstIsEven был результат проверки всех элементов массива firstArray на чётность.
+// В переменной eachElementInFirstIsOdd был результат проверки всех элементов массива firstArray на нечётность.
+// В переменной eachElementInSecondIsEven был результат проверки всех элементов массива secondArray на чётность.
+// В переменной eachElementInSecondIsOdd был результат проверки всех элементов массива secondArray на нечётность.
+// В переменной eachElementInThirdIsEven был результат проверки всех элементов массива thirdArray на чётность.
+// В переменной eachElementInThirdIsOdd был результат проверки всех элементов массива thirdArray на нечётность.
+
+const firstArray = [26, 94, 36, 18];
+const secondArray = [17, 61, 23];
+const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+// Пиши код ниже этой строки
+
+const eachElementInFirstIsEven = firstArray.every(element => element % 2 === 0);
+const eachElementInFirstIsOdd = firstArray.every(element => element % 2 !== 0);
+
+const eachElementInSecondIsEven = secondArray.every(number => number % 2 === 0);
+const eachElementInSecondIsOdd = secondArray.every(number => number % 2 !== 0);
+
+const eachElementInThirdIsEven = thirdArray.every(element => element % 2 === 0);
+const eachElementInThirdIsOdd = thirdArray.every(element => element % 2 !== 0);
+
+console.log(eachElementInFirstIsEven);
+console.log(eachElementInFirstIsOdd);
+console.log(eachElementInSecondIsEven);
+console.log(eachElementInSecondIsOdd);
+console.log(eachElementInThirdIsEven);
+console.log(eachElementInThirdIsOdd);
