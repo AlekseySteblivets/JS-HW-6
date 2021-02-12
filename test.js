@@ -1092,23 +1092,81 @@
 // В переменной eachElementInThirdIsEven был результат проверки всех элементов массива thirdArray на чётность.
 // В переменной eachElementInThirdIsOdd был результат проверки всех элементов массива thirdArray на нечётность.
 
-const firstArray = [26, 94, 36, 18];
-const secondArray = [17, 61, 23];
-const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+// const firstArray = [26, 94, 36, 18];
+// const secondArray = [17, 61, 23];
+// const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+// // Пиши код ниже этой строки
+
+// const eachElementInFirstIsEven = firstArray.every(element => element % 2 === 0);
+// const eachElementInFirstIsOdd = firstArray.every(element => element % 2 !== 0);
+
+// const eachElementInSecondIsEven = secondArray.every(number => number % 2 === 0);
+// const eachElementInSecondIsOdd = secondArray.every(number => number % 2 !== 0);
+
+// const eachElementInThirdIsEven = thirdArray.every(element => element % 2 === 0);
+// const eachElementInThirdIsOdd = thirdArray.every(element => element % 2 !== 0);
+
+// console.log(eachElementInFirstIsEven);
+// console.log(eachElementInFirstIsOdd);
+// console.log(eachElementInSecondIsEven);
+// console.log(eachElementInSecondIsOdd);
+// console.log(eachElementInThirdIsEven);
+// console.log(eachElementInThirdIsOdd);
+
+
+
+// 6-27-44Дополни функцию isEveryUserActive(users) так, чтобы она проверяла все ли 
+// пользователи сейчас активны(свойство isActive) и возвращала true или false.
+
 // Пиши код ниже этой строки
+const users = [
+    {
+        name: 'Ross Vazquez',
+        email: 'rossvazquez@xinware.com',
+        eyeColor: 'green',
+        friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+        isActive: false,
+        balance: 3793,
+        gender: 'male'
+    },
+    {
+        name: 'Elma Head',
+        email: 'elmahead@omatom.com',
+        eyeColor: 'green',
+        friends: ['Goldie Gentry', 'Aisha Tran'],
+        isActive: true,
+        balance: 2278,
+        gender: 'female'
+    },
+    {
+        name: 'Carey Barr',
+        email: 'careybarr@nurali.com',
+        eyeColor: 'blue',
+        friends: ['Jordan Sampson', 'Eddie Strong'],
+        isActive: true,
+        balance: 3951,
+        gender: 'male'
+    },
+    {
+        name: 'Blackburn Dotson',
+        email: 'blackburndotson@furnigeer.com',
+        eyeColor: 'brown',
+        friends: ['Jacklyn Lucas', 'Linda Chapman'],
+        isActive: false,
+        balance: 1498,
+        gender: 'male'
+    },
+    {
+        name: 'Sheree Anthony',
+        email: 'shereeanthony@kog.com',
+        eyeColor: 'brown',
+        friends: ['Goldie Gentry', 'Briana Decker'],
+        isActive: true,
+        balance: 2764,
+        gender: 'female'
+    }
+];
+const isEveryUserActive = (users) => users.every(user => user.isActive === true);
+// Пиши код выше этой строки
 
-const eachElementInFirstIsEven = firstArray.every(element => element % 2 === 0);
-const eachElementInFirstIsOdd = firstArray.every(element => element % 2 !== 0);
-
-const eachElementInSecondIsEven = secondArray.every(number => number % 2 === 0);
-const eachElementInSecondIsOdd = secondArray.every(number => number % 2 !== 0);
-
-const eachElementInThirdIsEven = thirdArray.every(element => element % 2 === 0);
-const eachElementInThirdIsOdd = thirdArray.every(element => element % 2 !== 0);
-
-console.log(eachElementInFirstIsEven);
-console.log(eachElementInFirstIsOdd);
-console.log(eachElementInSecondIsEven);
-console.log(eachElementInSecondIsOdd);
-console.log(eachElementInThirdIsEven);
-console.log(eachElementInThirdIsOdd);
+console.log(isEveryUserActive(users));
