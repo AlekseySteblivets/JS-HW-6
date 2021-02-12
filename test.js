@@ -1119,54 +1119,85 @@
 // пользователи сейчас активны(свойство isActive) и возвращала true или false.
 
 // Пиши код ниже этой строки
-const users = [
-    {
-        name: 'Ross Vazquez',
-        email: 'rossvazquez@xinware.com',
-        eyeColor: 'green',
-        friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
-        isActive: false,
-        balance: 3793,
-        gender: 'male'
-    },
-    {
-        name: 'Elma Head',
-        email: 'elmahead@omatom.com',
-        eyeColor: 'green',
-        friends: ['Goldie Gentry', 'Aisha Tran'],
-        isActive: true,
-        balance: 2278,
-        gender: 'female'
-    },
-    {
-        name: 'Carey Barr',
-        email: 'careybarr@nurali.com',
-        eyeColor: 'blue',
-        friends: ['Jordan Sampson', 'Eddie Strong'],
-        isActive: true,
-        balance: 3951,
-        gender: 'male'
-    },
-    {
-        name: 'Blackburn Dotson',
-        email: 'blackburndotson@furnigeer.com',
-        eyeColor: 'brown',
-        friends: ['Jacklyn Lucas', 'Linda Chapman'],
-        isActive: false,
-        balance: 1498,
-        gender: 'male'
-    },
-    {
-        name: 'Sheree Anthony',
-        email: 'shereeanthony@kog.com',
-        eyeColor: 'brown',
-        friends: ['Goldie Gentry', 'Briana Decker'],
-        isActive: true,
-        balance: 2764,
-        gender: 'female'
-    }
-];
-const isEveryUserActive = (users) => users.every(user => user.isActive === true);
-// Пиши код выше этой строки
+// const users = [
+//     {
+//         name: 'Ross Vazquez',
+//         email: 'rossvazquez@xinware.com',
+//         eyeColor: 'green',
+//         friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+//         isActive: false,
+//         balance: 3793,
+//         gender: 'male'
+//     },
+//     {
+//         name: 'Elma Head',
+//         email: 'elmahead@omatom.com',
+//         eyeColor: 'green',
+//         friends: ['Goldie Gentry', 'Aisha Tran'],
+//         isActive: true,
+//         balance: 2278,
+//         gender: 'female'
+//     },
+//     {
+//         name: 'Carey Barr',
+//         email: 'careybarr@nurali.com',
+//         eyeColor: 'blue',
+//         friends: ['Jordan Sampson', 'Eddie Strong'],
+//         isActive: true,
+//         balance: 3951,
+//         gender: 'male'
+//     },
+//     {
+//         name: 'Blackburn Dotson',
+//         email: 'blackburndotson@furnigeer.com',
+//         eyeColor: 'brown',
+//         friends: ['Jacklyn Lucas', 'Linda Chapman'],
+//         isActive: false,
+//         balance: 1498,
+//         gender: 'male'
+//     },
+//     {
+//         name: 'Sheree Anthony',
+//         email: 'shereeanthony@kog.com',
+//         eyeColor: 'brown',
+//         friends: ['Goldie Gentry', 'Briana Decker'],
+//         isActive: true,
+//         balance: 2764,
+//         gender: 'female'
+//     }
+// ];
+// const isEveryUserActive = (users) => users.every(user => user.isActive === true);
+// // Пиши код выше этой строки
 
-console.log(isEveryUserActive(users));
+// console.log(isEveryUserActive(users));
+
+
+
+// 6-28-44Используя метод some() дополни код так, чтобы:
+// В переменной anyElementInFirstIsEven был результат проверки наличия чётных элементов в массиве firstArray.
+// В переменной anyElementInFirstIsOdd был результат проверки наличия нечётных элементов в массиве firstArray.
+// В переменной anyElementInSecondIsEven был результат проверки наличия чётных элементов в массиве secondArray.
+// В переменной anyElementInSecondIsOdd был результат проверки наличия нечётных элементов в массиве secondArray.
+// В переменной anyElementInThirdIsEven был результат проверки наличия чётных элементов в массиве thirdArray.
+// В переменной anyElementInThirdIsOdd был результат проверки наличия нечётных элементов в массиве thirdArray.
+
+const firstArray = [26, 94, 36, 18];
+const secondArray = [17, 61, 23];
+const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+// Пиши код ниже этой строки
+
+const anyElementInFirstIsEven = firstArray.some(number => number % 2 === 0);
+const anyElementInFirstIsOdd = firstArray.some(number => number % 2 !== 0);
+
+const anyElementInSecondIsEven = secondArray.some(elem => elem % 2 === 0);
+const anyElementInSecondIsOdd = secondArray.some(elem => elem % 2 !== 0);
+
+const anyElementInThirdIsEven = thirdArray.some(elem => elem % 2 === 0);
+const anyElementInThirdIsOdd = thirdArray.some(elem => elem % 2 !== 0);
+
+console.log(anyElementInFirstIsEven);
+console.log(anyElementInFirstIsOdd);
+console.log(anyElementInSecondIsEven);
+console.log(anyElementInSecondIsOdd);
+console.log(anyElementInThirdIsEven);
+console.log(anyElementInThirdIsOdd);
