@@ -1561,8 +1561,19 @@ const users = [
 // 6-43-44Дополни функцию getSortedFriends(users) так, чтобы она возвращала массив 
 // уникальных имён друзей(свойство friends) отсортированный по алфавиту.
 
+// // Пиши код ниже этой строки
+// const getSortedFriends = users => users.flatMap(user => user.friends).filter((user, index, array) => array.indexOf(user) === index).sort((a, b) => a.localeCompare(b));
+
+// // Пиши код выше этой строки
+// console.log(getSortedFriends(users));
+
+
+
+// 6-44-44Дополни функцию getTotalBalanceByGender(users, gender) так, чтобы она возвращала общий баланс пользователей
+// (свойство balance), пол которых(свойство gender) совпадает со значением параметра gender.
 // Пиши код ниже этой строки
-const getSortedFriends = users => users.flatMap(user => user.friends).filter((user, index, array) => array.indexOf(user) === index).sort((a, b) => a.localeCompare(b));
+const getTotalBalanceByGender = (users, gender) => users.filter(user => user.gender === gender).reduce((total, user) => { return total + user.balance }, 0);
 
 // Пиши код выше этой строки
-console.log(getSortedFriends(users));
+
+console.log(getTotalBalanceByGender(users, 'male'));
