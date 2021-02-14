@@ -1398,9 +1398,31 @@ const users = [
 // 6-33-44Дополни функцию getTotalFriendCount(users) так, чтобы она считала и возвращала общее количество 
 // друзей(свойство friends) всех пользователей из массива users.
 
-// Пиши код ниже этой строки
-// const getTotalFriendCount = users => users.flatMap(user => user.friends).length;
-const getTotalFriendCount = users => users.reduce((total, user) => { return total + user.friends.length }, 0);
+// // Пиши код ниже этой строки
+// // const getTotalFriendCount = users => users.flatMap(user => user.friends).length;
+// const getTotalFriendCount = users => users.reduce((total, user) => { return total + user.friends.length }, 0);
 
-// Пиши код выше этой строки
-console.log(getTotalFriendCount(users));
+// // Пиши код выше этой строки
+// console.log(getTotalFriendCount(users));
+
+
+
+// 6-34-44Дополни код так, чтобы в переменной ascendingReleaseDates получилась отсортированная по 
+// возрастанию копия массива releaseDates,
+// а в переменной alphabeticalAuthors копия массива имён авторов authors отсортированная в по алфавиту.
+
+const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+const authors = [
+    'Ли Танит',
+    'Бернард Корнуэлл',
+    'Роберт Шекли',
+    'Федор Достоевский'
+];
+// Пиши код ниже этой строки
+
+const ascendingReleaseDates = [...releaseDates].sort();
+
+const alphabeticalAuthors = [...authors].sort();
+
+console.log(ascendingReleaseDates);
+console.log(alphabeticalAuthors);
