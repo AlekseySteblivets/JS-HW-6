@@ -1551,7 +1551,18 @@ const users = [
 // 6-42-44Дополни функцию getNamesSortedByFriendCount(users) так, чтобы она возвращала массив имён 
 // пользователей отсортированный по возрастанию количества их друзей(свойство friends).
 
+// // Пиши код ниже этой строки
+// const getNamesSortedByFriendCount = users => [...users].sort((a, b) => a.friends.length - b.friends.length).map(user => user.name);
+// // Пиши код выше этой строки
+// console.log(getNamesSortedByFriendCount(users));
+
+
+
+// 6-43-44Дополни функцию getSortedFriends(users) так, чтобы она возвращала массив 
+// уникальных имён друзей(свойство friends) отсортированный по алфавиту.
+
 // Пиши код ниже этой строки
-const getNamesSortedByFriendCount = users => [...users].sort((a, b) => a.friends.length - b.friends.length).map(user => user.name);
+const getSortedFriends = users => users.flatMap(user => user.friends).filter((user, index, array) => array.indexOf(user) === index).sort((a, b) => a.localeCompare(b));
+
 // Пиши код выше этой строки
-console.log(getNamesSortedByFriendCount(users));
+console.log(getSortedFriends(users));
