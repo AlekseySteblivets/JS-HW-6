@@ -1499,11 +1499,18 @@ const users = [
 // 6-38-44Дополни функцию sortByAscendingBalance(users) так, чтобы она возвращала массив
 // пользователей отсортированный по возрастанию их баланса(свойство balance).
 
-// Пиши код ниже этой строки
-const sortByAscendingBalance = users => {
-    const arrayBalance = [...users].sort((a, b) => a.balance - b.balance);
-    return arrayBalance;
-};
+// // Пиши код ниже этой строки
+// const sortByAscendingBalance = users => [...users].sort((a, b) => a.balance - b.balance)
 
+// // Пиши код выше этой строки
+// console.log(sortByAscendingBalance(users));
+
+
+
+// 6-39-44Дополни функцию sortByDescendingFriendCount(users) так, чтобы она возвращала массив пользователей 
+// отсортированный по убыванию количества их друзей(свойство friends).
+// Пиши код ниже этой строки
+const sortByDescendingFriendCount = users => [...users].sort((a, b) => b.friends.length - a.friends.length);
 // Пиши код выше этой строки
-console.log(sortByAscendingBalance(users));
+console.log(sortByDescendingFriendCount(users));
+console.log(users);
