@@ -1509,8 +1509,20 @@ const users = [
 
 // 6-39-44Дополни функцию sortByDescendingFriendCount(users) так, чтобы она возвращала массив пользователей 
 // отсортированный по убыванию количества их друзей(свойство friends).
+
+// // Пиши код ниже этой строки
+// const sortByDescendingFriendCount = users => [...users].sort((a, b) => b.friends.length - a.friends.length);
+// // Пиши код выше этой строки
+// console.log(sortByDescendingFriendCount(users));
+// console.log(users);
+
+
+
+// 6-40-44Дополни функцию sortByName(users) так, чтобы она возвращала массив пользователей отсортированный
+// по их имени(свойство name) в алфавитном порядке.
+
 // Пиши код ниже этой строки
-const sortByDescendingFriendCount = users => [...users].sort((a, b) => b.friends.length - a.friends.length);
+const sortByName = users => [...users].sort((a, b) => a.name.localeCompare(b.name));
+
 // Пиши код выше этой строки
-console.log(sortByDescendingFriendCount(users));
-console.log(users);
+console.log(sortByName(users));
