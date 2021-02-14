@@ -1448,17 +1448,48 @@ const users = [
 // Дополни код так, чтобы в переменной authorsInAlphabetOrder получилась отсортированная по алфавиту копия массива authors,
 //  а в переменной authorsInReversedOrder копия отсортированная в обратном алфавитном порядке.
 
-const authors = [
-    'Ли Танит',
-    'Бернард Корнуэлл',
-    'Роберт Шекли',
-    'Федор Достоевский',
-    'Говард Лавкрафт'
+// const authors = [
+//     'Ли Танит',
+//     'Бернард Корнуэлл',
+//     'Роберт Шекли',
+//     'Федор Достоевский',
+//     'Говард Лавкрафт'
+// ];
+// // Пиши код ниже этой строки
+
+// const authorsInAlphabetOrder = [...authors].sort((a, b) => a.localeCompare(b));
+
+// const authorsInReversedOrder = [...authors].sort((a, d) => d.localeCompare(a));
+
+// console.log(authorsInAlphabetOrder);
+// console.log(authorsInReversedOrder);
+
+
+
+// 6-37-44Дополни код так, чтобы:
+// В переменной sortedByAuthorName получился массив книг отсортированный по имени автора в алфавитном порядке.
+// В переменной sortedByReversedAuthorName получился массив книг отсортированный по имени автора в обратном алфавитном порядке.
+// В переменной sortedByAscendingRating получился массив книг отсортированный по возрастанию рейтинга.
+// В переменной sortedByDescentingRating получился массив книг отсортированный по убыванию рейтинга.
+
+const books = [
+    { title: 'Последнее королевство', author: 'Бернард Корнуэлл', rating: 8.38 },
+    { title: 'На берегу спокойных вод', author: 'Роберт Шекли', rating: 8.51 },
+    { title: 'Сон смешного человека', author: 'Федор Достоевский', rating: 7.75 },
+    { title: 'Красна как кровь', author: 'Ли Танит', rating: 7.94 },
+    { title: 'Враг Божий', author: 'Бернард Корнуэлл', rating: 8.67 }
 ];
 // Пиши код ниже этой строки
 
-const authorsInAlphabetOrder = [...authors].sort((a, b) => a.localeCompare(b));
+const sortedByAuthorName = [...books].sort((a, b) => a.author.localeCompare(b.author));
 
-const authorsInReversedOrder = [...authors].sort((a, d) => d.localeCompare(a));
-console.log(authorsInAlphabetOrder);
-console.log(authorsInReversedOrder);
+const sortedByReversedAuthorName = [...books].sort((a, b) => b.author.localeCompare(a.author));
+
+const sortedByAscendingRating = [...books].sort((a, b) => a.rating - b.rating);
+
+const sortedByDescentingRating = [...books].sort((a, b) => b.rating - a.rating);
+
+console.log(sortedByAuthorName);
+console.log(sortedByReversedAuthorName);
+console.log(sortedByAscendingRating);
+console.log(sortedByDescentingRating);
