@@ -1432,12 +1432,33 @@ const users = [
 // по её возрастанию или убыванию.Дополни код так, чтобы в переменной ascendingReleaseDates получилась
 // отсортированная по возрастанию копия массива releaseDates, а в переменной descendingReleaseDates копия отсортированная по убыванию.
 
-const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// // Пиши код ниже этой строки
+
+// const ascendingReleaseDates = [...releaseDates].sort();
+
+// const descendingReleaseDates = [...releaseDates].sort((a, b) => b - a);
+
+// console.log(ascendingReleaseDates);
+// console.log(descendingReleaseDates);
+
+
+
+// 6-36-44Онлайн бибилиотеке необходимо отображать книги отсортированные по автору, в алфавитном и обратном алфавитном порядке. 
+// Дополни код так, чтобы в переменной authorsInAlphabetOrder получилась отсортированная по алфавиту копия массива authors,
+//  а в переменной authorsInReversedOrder копия отсортированная в обратном алфавитном порядке.
+
+const authors = [
+    'Ли Танит',
+    'Бернард Корнуэлл',
+    'Роберт Шекли',
+    'Федор Достоевский',
+    'Говард Лавкрафт'
+];
 // Пиши код ниже этой строки
 
-const ascendingReleaseDates = [...releaseDates].sort();
+const authorsInAlphabetOrder = [...authors].sort((a, b) => a.localeCompare(b));
 
-const descendingReleaseDates = [...releaseDates].sort((a, b) => b - a);
-
-console.log(ascendingReleaseDates);
-console.log(descendingReleaseDates);
+const authorsInReversedOrder = [...authors].sort((a, d) => d.localeCompare(a));
+console.log(authorsInAlphabetOrder);
+console.log(authorsInReversedOrder);
