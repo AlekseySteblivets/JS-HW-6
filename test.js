@@ -1472,24 +1472,38 @@ const users = [
 // В переменной sortedByAscendingRating получился массив книг отсортированный по возрастанию рейтинга.
 // В переменной sortedByDescentingRating получился массив книг отсортированный по убыванию рейтинга.
 
-const books = [
-    { title: 'Последнее королевство', author: 'Бернард Корнуэлл', rating: 8.38 },
-    { title: 'На берегу спокойных вод', author: 'Роберт Шекли', rating: 8.51 },
-    { title: 'Сон смешного человека', author: 'Федор Достоевский', rating: 7.75 },
-    { title: 'Красна как кровь', author: 'Ли Танит', rating: 7.94 },
-    { title: 'Враг Божий', author: 'Бернард Корнуэлл', rating: 8.67 }
-];
+// const books = [
+//     { title: 'Последнее королевство', author: 'Бернард Корнуэлл', rating: 8.38 },
+//     { title: 'На берегу спокойных вод', author: 'Роберт Шекли', rating: 8.51 },
+//     { title: 'Сон смешного человека', author: 'Федор Достоевский', rating: 7.75 },
+//     { title: 'Красна как кровь', author: 'Ли Танит', rating: 7.94 },
+//     { title: 'Враг Божий', author: 'Бернард Корнуэлл', rating: 8.67 }
+// ];
+// // Пиши код ниже этой строки
+
+// const sortedByAuthorName = [...books].sort((a, b) => a.author.localeCompare(b.author));
+
+// const sortedByReversedAuthorName = [...books].sort((a, b) => b.author.localeCompare(a.author));
+
+// const sortedByAscendingRating = [...books].sort((a, b) => a.rating - b.rating);
+
+// const sortedByDescentingRating = [...books].sort((a, b) => b.rating - a.rating);
+
+// console.log(sortedByAuthorName);
+// console.log(sortedByReversedAuthorName);
+// console.log(sortedByAscendingRating);
+// console.log(sortedByDescentingRating);
+
+
+
+// 6-38-44Дополни функцию sortByAscendingBalance(users) так, чтобы она возвращала массив
+// пользователей отсортированный по возрастанию их баланса(свойство balance).
+
 // Пиши код ниже этой строки
+const sortByAscendingBalance = users => {
+    const arrayBalance = [...users].sort((a, b) => a.balance - b.balance);
+    return arrayBalance;
+};
 
-const sortedByAuthorName = [...books].sort((a, b) => a.author.localeCompare(b.author));
-
-const sortedByReversedAuthorName = [...books].sort((a, b) => b.author.localeCompare(a.author));
-
-const sortedByAscendingRating = [...books].sort((a, b) => a.rating - b.rating);
-
-const sortedByDescentingRating = [...books].sort((a, b) => b.rating - a.rating);
-
-console.log(sortedByAuthorName);
-console.log(sortedByReversedAuthorName);
-console.log(sortedByAscendingRating);
-console.log(sortedByDescentingRating);
+// Пиши код выше этой строки
+console.log(sortByAscendingBalance(users));
