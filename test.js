@@ -1571,9 +1571,17 @@ const users = [
 
 // 6-44-44Дополни функцию getTotalBalanceByGender(users, gender) так, чтобы она возвращала общий баланс пользователей
 // (свойство balance), пол которых(свойство gender) совпадает со значением параметра gender.
-// Пиши код ниже этой строки
-const getTotalBalanceByGender = (users, gender) => users.filter(user => user.gender === gender).reduce((total, user) => { return total + user.balance }, 0);
+// // Пиши код ниже этой строки
+// const getTotalBalanceByGender = (users, gender) => users.filter(user => user.gender === gender).reduce((total, user) => { return total + user.balance }, 0);
 
-// Пиши код выше этой строки
+// // Пиши код выше этой строки
 
-console.log(getTotalBalanceByGender(users, 'male'));
+// console.log(getTotalBalanceByGender(users, 'male'));
+
+
+function addBinary(a, b) {
+    return (a + b).toString(2);
+
+
+}
+console.log(addBinary(2, 3));
